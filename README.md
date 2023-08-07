@@ -22,5 +22,8 @@ This API is hosted by iqair.com and can get all the basic info about Air Quality
 
 
 
+
+
+
 ❗️Note that I did not use Alamofire to decode the JSON file coming from our API. Yes, all of the work was done in a custom way
 
