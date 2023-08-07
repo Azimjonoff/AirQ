@@ -8,7 +8,7 @@
 import UIKit
 import DropDown
 
-class CityViewController: UIViewController, StateManagerDelegate, CityManagerDelegate {
+class CityViewController: UIViewController, CountriesManagerDelegate, StateManagerDelegate, CityManagerDelegate {
     
     @IBOutlet var countryView: UIView!
     @IBOutlet var countryLabel: UILabel!
@@ -21,10 +21,11 @@ class CityViewController: UIViewController, StateManagerDelegate, CityManagerDel
     let stateDropDown = DropDown()
     let cityDropDown = DropDown()
     
+    let countriesManager = CountriesManager()
     let stateManager = StateManager()
     let cityManager = CityManager()
     
-    let countries = ["Uzbekistan", "Russia", "India", "USA", "China"]
+    var countries = ["Uzbekistan", "Russia", "India", "USA", "China"]
     var statess = [""]
     var citiess = [""]
     
@@ -35,6 +36,7 @@ class CityViewController: UIViewController, StateManagerDelegate, CityManagerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        countriesManager.delegate = self
         stateManager.delegate = self
         cityManager.delegate = self
         
@@ -56,6 +58,7 @@ class CityViewController: UIViewController, StateManagerDelegate, CityManagerDel
         cityDropDown.dataSource = citiess
         cityDropDown.bottomOffset = CGPoint(x: 0, y: (cityDropDown.anchorView?.plainView.bounds.height)!)
         
+        countriesManager.getCountires()
     }
     
     @IBAction func countryPressed(_ sender: Any) {
@@ -92,6 +95,16 @@ class CityViewController: UIViewController, StateManagerDelegate, CityManagerDel
             navigationController?.pushViewController(vc, animated: true)
             let url = "https://api.airvisual.com/v2/city?city="+city+"&state="+state+"&country="+country+"&key=03442986-76e1-4d06-a365-6180f7197e2c"
             vc.airManager.performLocationRequest(with: url)
+        }
+    }
+    
+    func didUpdateCountries(_ countriesManager: CountriesManager, countries: [Country]) {
+        DispatchQueue.main.async {
+            self.countries.removeAll()
+            for country in countries {
+                self.countries.append(country.country)
+            }
+            self.countryDropDown.dataSource = self.countries
         }
     }
     

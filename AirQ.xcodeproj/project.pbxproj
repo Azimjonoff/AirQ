@@ -21,6 +21,8 @@
 		1F2345972A6A990C00B32139 /* CityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2345962A6A990C00B32139 /* CityData.swift */; };
 		1F2345992A6A9D3A00B32139 /* StateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2345982A6A9D3A00B32139 /* StateManager.swift */; };
 		1F23459B2A6AA42400B32139 /* CityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F23459A2A6AA42400B32139 /* CityManager.swift */; };
+		1F2345A02A80D9BB00B32139 /* CountriesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F23459F2A80D9BB00B32139 /* CountriesData.swift */; };
+		1F2345A22A80DA3A00B32139 /* CountriesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2345A12A80DA3A00B32139 /* CountriesManager.swift */; };
 		74CAAC991DD41A2F6A8C042D /* Pods_AirQ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DDEC360E62FC4789FB1EFC /* Pods_AirQ.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,8 @@
 		1F2345962A6A990C00B32139 /* CityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityData.swift; sourceTree = "<group>"; };
 		1F2345982A6A9D3A00B32139 /* StateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateManager.swift; sourceTree = "<group>"; };
 		1F23459A2A6AA42400B32139 /* CityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityManager.swift; sourceTree = "<group>"; };
+		1F23459F2A80D9BB00B32139 /* CountriesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesData.swift; sourceTree = "<group>"; };
+		1F2345A12A80DA3A00B32139 /* CountriesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesManager.swift; sourceTree = "<group>"; };
 		5940792F9BB3D15956162328 /* Pods-AirQ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQ.debug.xcconfig"; path = "Target Support Files/Pods-AirQ/Pods-AirQ.debug.xcconfig"; sourceTree = "<group>"; };
 		70C07BDA736E359D9BF93274 /* Pods-AirQ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQ.release.xcconfig"; path = "Target Support Files/Pods-AirQ/Pods-AirQ.release.xcconfig"; sourceTree = "<group>"; };
 		72DDEC360E62FC4789FB1EFC /* Pods_AirQ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirQ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,9 +117,11 @@
 			children = (
 				1F2345922A67D7EC00B32139 /* AirModel.swift */,
 				1F2345902A67D7C900B32139 /* AirData.swift */,
+				1F23459F2A80D9BB00B32139 /* CountriesData.swift */,
 				1F23458E2A67C2C700B32139 /* StateData.swift */,
 				1F2345962A6A990C00B32139 /* CityData.swift */,
 				1F23454A2A6523F100B32139 /* AirManager.swift */,
+				1F2345A12A80DA3A00B32139 /* CountriesManager.swift */,
 				1F2345982A6A9D3A00B32139 /* StateManager.swift */,
 				1F23459A2A6AA42400B32139 /* CityManager.swift */,
 			);
@@ -257,7 +263,9 @@
 				1F23451B2A6501E100B32139 /* CityViewController.swift in Sources */,
 				1F2345172A6501E100B32139 /* AppDelegate.swift in Sources */,
 				1F23458F2A67C2C700B32139 /* StateData.swift in Sources */,
+				1F2345A22A80DA3A00B32139 /* CountriesManager.swift in Sources */,
 				1F2345992A6A9D3A00B32139 /* StateManager.swift in Sources */,
+				1F2345A02A80D9BB00B32139 /* CountriesData.swift in Sources */,
 				1F2345972A6A990C00B32139 /* CityData.swift in Sources */,
 				1F23454B2A6523F100B32139 /* AirManager.swift in Sources */,
 				1F2345192A6501E100B32139 /* SceneDelegate.swift in Sources */,

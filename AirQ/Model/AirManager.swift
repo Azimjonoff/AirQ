@@ -18,6 +18,7 @@ class AirManager {
     
     func performLocationRequest(with urlString: String) {
         if let url = URL(string: urlString) {
+            print(url)
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url) { (data, response, error) in
                 if error != nil {
@@ -42,6 +43,7 @@ class AirManager {
             let AQI = decodedData.data.current.pollution.aqius
             
             let city = AirModel(cityName: cityName, AQI: AQI)
+            print(AQI)
             return city
             
         } catch {
